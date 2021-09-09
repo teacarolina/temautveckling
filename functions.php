@@ -16,6 +16,7 @@ function load_stylesheets() {
     
 function load_js() {
      wp_register_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);
+     //ska den här vara med?
      wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array('jquery'), null, true);
 
      wp_enqueue_script('script');
@@ -33,4 +34,26 @@ function custom_menu() {
     register_nav_menu('my-sidebar-menu',__( 'My Sidebar Menu' ));
   }
   add_action( 'init', 'custom_sidebar_menu' );
+
+function addWidgets() {
+  register_sidebar(
+    array(
+      'name' => 'about-us',
+      'id' => 'about-us'
+    )
+    );
+    register_sidebar(
+      array(
+        'name' => 'contact-us',
+        'id' => 'contact-us'
+      ),
+      );
+      register_sidebar(
+        array(
+          'name' => 'social-media',
+          'id' => 'social-media'
+        ),
+        );
+}
+add_action('widgets_init', 'addWidgets');
 ?>

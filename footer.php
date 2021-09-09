@@ -4,14 +4,16 @@ wp_footer();
 <footer id="footer">
 			<div class="container">
 				<div class="row top">
-					<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="col-xs-12 col-sm-6 col-md-4 widget-bullet">
 						<h4>Kort om oss</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
-						<p>Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis.</p>
+						<p class="widget-bullet"><?php dynamic_sidebar('about-us')?></p>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
+						<p>Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis.</p> -->
 					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1 widget-bullet">
 						<h4>Kontaktuppgifter</h4>
-						<p>
+						<p><?php dynamic_sidebar('contact-us')?></p>
+					<!-- 	<p>
 							The Company<br />
 							Gatgatan 1<br />
 							123 45 Någonstans
@@ -19,11 +21,13 @@ wp_footer();
 						<p>
 							Tel: 0123456789<br />
 							E-post: <a href="">info@thecompany.com</a>
-						</p>
+						</p> -->
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 						<h4>Social media</h4>
-						<ul class="social">
+						<div class="widget-bullet">
+						<?php dynamic_sidebar('social-media')?></div>
+						<!-- <ul class="social">
 							<li>
 								<i class="fa fa-facebook"></i> <a href="">Facebook</a>
 							</li>
@@ -36,7 +40,7 @@ wp_footer();
 							<li>
 								<i class="fa fa-linkedin"></i> <a href="">LinkedIn</a>
 							</li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				<div class="row bottom">
