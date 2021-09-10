@@ -46,7 +46,7 @@ get_header();
 								<ul>
 									<li>
 										<form id="searchform" class="searchform">
-											<div>
+											<div class="search-text">
 												<label class="screen-reader-text">Sök efter:</label>
 												<input type="text" />
 												<input type="submit" value="Sök" />

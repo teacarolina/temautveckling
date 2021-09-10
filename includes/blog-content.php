@@ -7,9 +7,9 @@ $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publi
 <?php while ( $allPostsWPQuery->have_posts() ) : $allPostsWPQuery->the_post(); ?>
 <article>
 								
-<?php get_the_post_thumbnail_url() ?>
+<?php the_post_thumbnail('large'); ?>
 <h2 class="title">
-<a href="inlagg.html"><?php the_title(); ?></a>
+<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </h2>
 
 <ul class="meta">
@@ -23,7 +23,7 @@ $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publi
 <i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
 </li>
 </ul>
-<p><?php the_content()?></p>
+<p><?php the_excerpt();?></p>
 </article>
 
       <?php endwhile; ?>
