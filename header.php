@@ -12,17 +12,22 @@ wp_head();
 
 <div id="wrap">
 <header id="header">
+	
 			<div class="container">
+				
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
 						<a class="logo" href="index.html">Labb 1</a>
 					</div>
+					
 					<div class="col-sm-6 hidden-xs">
+						
 						<form id="searchform" class="searchform">
 							<div>
-								<label class="screen-reader-text">Sök efter:</label>
+								<?php get_search_form(); ?>
+								<!-- <label class="screen-reader-text">Sök efter:</label>
 								<input type="text" />
-								<input type="submit" value="Sök" />
+								<input type="submit" value="Sök" /> -->
 							</div>
 						</form>
 					</div>
@@ -37,11 +42,12 @@ wp_head();
 		</header>
 
 		<div class="mobile-search">
+		
 			<form id="searchform" class="searchform">
 				<div>
 					<label class="screen-reader-text">Sök efter:</label>
 					<input type="text"/>
-					<input type="submit" value="Sök" />
+					<input type="submit" value="Sök" /> 
 				</div>
 			</form>
 		</div>
