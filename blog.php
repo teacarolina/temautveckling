@@ -42,19 +42,21 @@ get_header();
 							</nav>
 						</div>
 						<aside id="secondary" class="col-xs-12 col-md-3">
-							<div id="sidebar">
+							<div id="sidebar" class="widget-bullet">
 								<ul>
 									<li>
 										<form id="searchform" class="searchform">
 											<div class="search-text">
+											<h2>Sök efter:</h2>
 												<label class="screen-reader-text">Sök efter:</label>
-												<input type="text" />
-												<input type="submit" value="Sök" />
+												<?php get_search_form(); ?>
 											</div>
 										</form>
 									</li>
 								</ul>
 								<ul role="navigation">
+								<?php dynamic_sidebar('widget-menu')?></ul>
+								<!-- <ul role="navigation">
 									<li class="pagenav">
 										<h2>Sidor</h2>
 										<ul>
@@ -107,7 +109,7 @@ get_header();
 											</li>
 										</ul>
 									</li>
-								</ul>
+								</ul> -->
 							</div>
 						</aside>
 					</div>

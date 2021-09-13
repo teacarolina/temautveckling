@@ -23,6 +23,7 @@ wp_head();
 					<div class="col-sm-6 hidden-xs">
 						
 						<form id="searchform" class="searchform">
+							<!--sökfunktionen funkar bara från startsidan??-->
 							<div>
 								<?php get_search_form(); ?>
 								<!-- <label class="screen-reader-text">Sök efter:</label>

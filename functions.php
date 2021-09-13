@@ -35,6 +35,21 @@ function custom_menu() {
   }
   add_action( 'init', 'custom_sidebar_menu' );
 
+  function custom_widget_menu() {
+    register_nav_menu('my-widget-menu',__( 'My Widget Menu' ));
+  }
+  add_action( 'init', 'custom_widget_menu' );
+
+  function custom_archive_menu() {
+    register_nav_menu('my-archive-menu',__( 'My archive Menu' ));
+  }
+  add_action( 'init', 'custom_archive_menu' );
+
+  function custom_category_menu() {
+    register_nav_menu('my-category-menu',__( 'My category Menu' ));
+  }
+  add_action( 'init', 'custom_category_menu' );
+
 function addWidgets() {
   register_sidebar(
     array(
@@ -54,6 +69,12 @@ function addWidgets() {
           'id' => 'social-media'
         ),
         );
+        register_sidebar(
+          array(
+            'name' => 'widget-menu',
+            'id' => 'widget-menu'
+          ),
+          );
 }
 add_action('widgets_init', 'addWidgets');
 
