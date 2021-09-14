@@ -11,11 +11,9 @@ get_header();
 							<div class="hero">
 							<!--Calling image located in image folder and displaying it-->
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/city.jpg">
-								<div class="text">
-
-								<!--Ska det här komma från WP? -->
-									<h1>Hej och välkommen!</h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
+								<div class="text widget-bullet">
+								<!--Displaying widget named front-page-->
+								<?php dynamic_sidebar('front-page');?>
 								</div>
 							</div>
 						</div>

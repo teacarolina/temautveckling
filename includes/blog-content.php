@@ -1,3 +1,5 @@
+<!--ej kommenterat content + fixa category och date/author så man kan klicka?-->
+
 <?php 
 $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
  
@@ -20,7 +22,10 @@ $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publi
 <i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author(); ?></a>
 </li>
 <li>
-<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
+<i class="fa fa-tag"></i><?php foreach((get_the_category()) as $category) {
+                                echo $category->cat_name . ', ';
+                            } ?> 
+    <!-- <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a> -->
 </li>
 </ul>
 <p><?php the_excerpt();?></p>

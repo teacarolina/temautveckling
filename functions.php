@@ -89,6 +89,12 @@ function addWidgets() {
               'id' => 'copyright'
             ),
             );
+            register_sidebar(
+              array(
+                'name' => 'front-page',
+                'id' => 'front-page'
+              ),
+              );
 }
 add_action('widgets_init', 'addWidgets');
 
