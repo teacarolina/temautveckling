@@ -18,7 +18,7 @@ wp_head();
 				
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+						<a class="logo" href="<?php echo get_home_url();?>">Labb 1</a>
 					</div>
 					
 					<div class="col-sm-6 hidden-xs">

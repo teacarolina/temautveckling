@@ -19,9 +19,8 @@ get_header();
 						<p><?php get_template_part('includes/child', 'content'); ?></p>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-6">
-						<!--Calling image located in image folder and displaying it-->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/photo.jpg">
-
+						<!--Calling the featured image of the post-->
+							<?php the_post_thumbnail('large'); ?>
 						</div>
 					</div>
 				</div>

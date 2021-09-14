@@ -1,6 +1,9 @@
 <? if(have_posts()) : while( have_posts() ): the_post();?>
 
-<!--lägg till ifall det inte finns något sökresultat???-->
+<!--lägg till ifall det inte finns något sökresultat??? nu syns kategori och författare helt
+tom hur ska man göra för att få bort det?
+
+lägg till kommentarer i js, includes, img, fonts, css-->
 
 <article>
 <?php the_post_thumbnail('large'); ?>

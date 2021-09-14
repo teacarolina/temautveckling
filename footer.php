@@ -23,15 +23,13 @@ wp_footer();
 					</div>
 				</div>
 				<div class="row bottom">
-					<div class="col-xs-12">
-						<!--Ska jag göra det här till en widget också eller????-->
-						<p>Copyright &copy; Grupp X, 2016</p>
+					<div class="col-xs-12 widget-bullet">
+					<!--Displaying widget named copyright-->
+						<?php dynamic_sidebar('copyright');?>
 					</div>
 				</div>
 			</div>
 		</footer>
-
 	</div>
-
 </body>
 </html>

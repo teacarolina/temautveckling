@@ -82,6 +82,13 @@ function addWidgets() {
             'id' => 'widget-menu'
           ),
           );
+          //widget named copyright for copyright text (footer)
+          register_sidebar(
+            array(
+              'name' => 'copyright',
+              'id' => 'copyright'
+            ),
+            );
 }
 add_action('widgets_init', 'addWidgets');
 
