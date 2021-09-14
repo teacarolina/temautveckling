@@ -6,6 +6,7 @@
     </head>
 <body>
 
+<!--Built in Hook-->
 <?php
 wp_head();
 ?>
@@ -25,10 +26,8 @@ wp_head();
 						<form id="searchform" class="searchform">
 							<!--sökfunktionen funkar bara från startsidan??-->
 							<div>
+						<!--Using built in WP function to create a search form-->
 								<?php get_search_form(); ?>
-								<!-- <label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" /> -->
 							</div>
 						</form>
 					</div>
@@ -43,7 +42,7 @@ wp_head();
 		</header>
 
 		<div class="mobile-search">
-		
+		<!--Vad är det här???-->
 			<form id="searchform" class="searchform">
 				<div>
 					<label class="screen-reader-text">Sök efter:</label>
@@ -59,16 +58,11 @@ wp_head();
 				<div class="row">
 					<div class="col-xs-12">
 					<ul class="menu">
-					
+			<!--Displaying menu named my-custom-menu-->
 					<?php
 wp_nav_menu( array( 
     'theme_location' => 'my-custom-menu') ); 
-?>
-						
-							
-							
-							
-							
+?>			
 						</ul>
 					</div>
 				</div>

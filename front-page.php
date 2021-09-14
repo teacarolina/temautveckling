@@ -1,3 +1,4 @@
+<!--Adding header to page-->
 <?php
 get_header();
 ?>
@@ -8,6 +9,7 @@ get_header();
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="hero">
+							<!--Calling image located in image folder and displaying it-->
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/city.jpg">
 								<div class="text">
 									<h1>Hej och välkommen!</h1>
@@ -20,6 +22,7 @@ get_header();
 			</section>
 		</main>
 
+<!--Adding footer to page-->
 <?php
 get_footer();
 ?>

@@ -1,7 +1,9 @@
+<!--Creating a template to assign in WP admin-->
 <?php /*
 Template Name: Contact
 */?>
 
+<!--Adding header to page-->
 <?php
 get_header();
 ?>
@@ -25,6 +27,8 @@ get_header();
 				</div>
 			</section>
 		</main>
+
+<!--Adding footer to page-->
 <?php
 get_footer();
 ?>
