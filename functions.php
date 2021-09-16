@@ -97,8 +97,8 @@ function addWidgets() {
               );
               register_sidebar(
                 array(
-                  'name' => 'category',
-                  'id' => 'category'
+                  'name' => 'archive',
+                  'id' => 'archive'
                 ),
                 );
 }
