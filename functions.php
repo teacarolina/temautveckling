@@ -95,6 +95,12 @@ function addWidgets() {
                 'id' => 'front-page'
               ),
               );
+              register_sidebar(
+                array(
+                  'name' => 'category',
+                  'id' => 'category'
+                ),
+                );
 }
 add_action('widgets_init', 'addWidgets');
 

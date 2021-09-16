@@ -1,7 +1,3 @@
-<!--EJ KLAR
-samt lägg till arkiv + författare
-samt pagination fungerar inte-->
-
 <!--Adding header to page-->
 <?php
 get_header();
@@ -12,11 +8,11 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
-							<h1>Kategorier</h1>
-					<article>
+							<h1>Författare</h1>
+					
 							<!--Displaying content created at single-content.php-->
-							<?php get_template_part('includes/category', 'content'); ?>
-</article>
+							<?php get_template_part('includes/author', 'content'); ?>
+				
 							<nav class="navigation pagination">
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
 								<a class="prev page-numbers" href="">Föregående</a>
