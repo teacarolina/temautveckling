@@ -19,9 +19,7 @@ get_header();
 									<li>
 										<form id="searchform" class="searchform">
 											<div>
-												<!--lagt till så länge???-->
 												<h2>Sök efter:</h2>
-												<label class="screen-reader-text">Sök efter:</label>
 										<!--Using built in WP function to create a search form-->
 												<?php get_search_form(); ?>
 											</div>

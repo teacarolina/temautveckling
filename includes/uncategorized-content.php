@@ -1,4 +1,4 @@
-<!--ej kommenterat content + fixa category och date/author så man kan klicka?-->
+<!--Content for Category Uncategorized page-->
 
 <?php 
 $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'category_name'=>'uncategorized')); ?>
@@ -19,13 +19,12 @@ $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publi
 <i class="fa fa-calendar"></i> <?php the_date(); ?>
 </li>
 <li>
-<i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author(); ?></a>
+<i class="fa fa-user"></i> <span><?php the_author();?></span>
 </li>
-<li>
+<li>    <!--using foreach to be able to retrieve multiple categories-->
 <i class="fa fa-tag"></i><?php foreach((get_the_category()) as $category) {
                                 echo $category->cat_name . ', ';
                             } ?> 
-    <!-- <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a> -->
 </li>
 </ul>
 <p><?php the_excerpt();?></p>

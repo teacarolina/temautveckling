@@ -1,12 +1,11 @@
-<!--ej kommenterat content + fixa category och date/author så man kan klicka?-->
+<!--Content for Blog page-->
 
-<?php 
-$allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
- 
-<?php if ( $allPostsWPQuery->have_posts() ) : ?>
+<!--Loop for retreving posts/content-->
+<?php if ( have_posts() ) : ?>
 
 <!-- Blog entry -->
-<?php while ( $allPostsWPQuery->have_posts() ) : $allPostsWPQuery->the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
+
 <article>
 								
 <?php the_post_thumbnail('large'); ?>
@@ -19,20 +18,26 @@ $allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publi
 <i class="fa fa-calendar"></i> <?php the_date(); ?>
 </li>
 <li>
-<i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author(); ?></a>
+<i class="fa fa-user"></i> <span><?php the_author();?></span>
 </li>
-<li>
+<li>                   <!--using foreach to be able to retrieve multiple categories-->
 <i class="fa fa-tag"></i><?php foreach((get_the_category()) as $category) {
                                 echo $category->cat_name . ', ';
                             } ?> 
-    <!-- <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a> -->
 </li>
 </ul>
+<!--Part of the text will be displayed-->
 <p><?php the_excerpt();?></p>
 </article>
 
       <?php endwhile; ?>
+
+      
       <?php wp_reset_postdata(); ?>
+      
       <?php else : ?>
+        
+                <!--If there are no posts this will be displayed-->
     <p><?php _e( 'There no posts to display.' ); ?></p>
+    
 <?php endif; ?>

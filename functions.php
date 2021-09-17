@@ -13,7 +13,6 @@ function load_stylesheets() {
 //register and enqueue the js files
 function load_js() {
      wp_register_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);
-     //ska den här vara med?
      wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array('jquery'), null, true);
 
      wp_enqueue_script('script');
@@ -89,12 +88,14 @@ function addWidgets() {
               'id' => 'copyright'
             ),
             );
+            //widget named front-page for front page text
             register_sidebar(
               array(
                 'name' => 'front-page',
                 'id' => 'front-page'
               ),
               );
+              //widget named archive for archive page
               register_sidebar(
                 array(
                   'name' => 'archive',
@@ -106,4 +107,5 @@ add_action('widgets_init', 'addWidgets');
 
 //to support thumbnails in code
 add_theme_support('post-thumbnails');
+
 ?>

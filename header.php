@@ -24,7 +24,6 @@ wp_head();
 					<div class="col-sm-6 hidden-xs">
 						
 						<form id="searchform" class="searchform">
-							<!--sökfunktionen funkar bara från startsidan??-->
 							<div>
 						<!--Using built in WP function to create a search form-->
 								<?php get_search_form(); ?>
@@ -42,12 +41,10 @@ wp_head();
 		</header>
 
 		<div class="mobile-search">
-		<!--Vad är det här???-->
 			<form id="searchform" class="searchform">
 				<div>
 					<label class="screen-reader-text">Sök efter:</label>
-					<input type="text"/>
-					<input type="submit" value="Sök" /> 
+					<?php get_search_form(); ?>
 				</div>
 			</form>
 		</div>
